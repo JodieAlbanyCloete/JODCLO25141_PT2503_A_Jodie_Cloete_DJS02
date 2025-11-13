@@ -38,10 +38,12 @@ class PodcastGrid extends HTMLElement {
             .title {
               font-weight: bold;
               color: #333;
+              margin-bottom: 0.5rem;
             }
             .updated {
               font-size: 0.9rem;
               color: #666;
+              margin-top:0.5rem;
             }
           </style>
         `;
@@ -52,6 +54,7 @@ class PodcastGrid extends HTMLElement {
         <div class="card">
         <img src="${p.image}" alt="${p.title}" class="cover" />
           <div class="title">🎧 ${p.title}</div>
+          <div class="genres">${p.genres}</div>
           <div class="updated">Updated: ${p.updated}</div>
         </div>
       `
