@@ -6,7 +6,7 @@ export function getGenreNames(ids) {
   return ids
     .map((id) => {
       const genre = genres.find((g) => g.id === id);
-      return genre ? getGenreNames.title : "Unknown";
+      return genre ? genre.title : "Unknown";
     })
     .join(", ");
 }
