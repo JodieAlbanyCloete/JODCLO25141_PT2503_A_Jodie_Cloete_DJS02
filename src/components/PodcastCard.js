@@ -1,6 +1,7 @@
 console.log("PodcastCard.js linked");
 // podcast-grid.js
 import { podcasts } from "../../data.js";
+import { getGenreNames } from "../utils/genre.js";
 
 class PodcastGrid extends HTMLElement {
   constructor() {
@@ -54,8 +55,10 @@ class PodcastGrid extends HTMLElement {
         <div class="card">
         <img src="${p.image}" alt="${p.title}" class="cover" />
           <div class="title">🎧 ${p.title}</div>
-          <div class="genres">${p.genres}</div>
-          <div class="updated">Updated: ${p.updated}</div>
+          <div class="genres">${getGenreNames(p.genres)}</div>
+          <div class="updated">Updated: ${new Date(
+            p.updated
+          ).toLocaleDateString()}</div>
         </div>
       `
       )
