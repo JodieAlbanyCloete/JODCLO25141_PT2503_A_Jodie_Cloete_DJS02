@@ -15,39 +15,50 @@ class PodcastGrid extends HTMLElement {
 
   render() {
     const style = `
-          <style>
-            .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 1rem;
-}
-  
-            .card {
-              padding: 1rem;
-              border-radius: 0.5rem;
-              background: #dab2f5ff;
-              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-              margin:0.5rem;
-            }
-              .card img.cover {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+      gap: 1rem;
+    }
 
-            .title {
-              font-weight: bold;
-              color: #333;
-              margin-bottom: 0.5rem;
-            }
-            .updated {
-              font-size: 0.9rem;
-              color: #666;
-              margin-top:0.5rem;
-            }
-          </style>
-        `;
+    .card {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: #dab2f5ff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 0.5rem;
+    }
+
+    .card img.cover {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .updated {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    .genres{
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+      border: solid black 0.2rem;
+      border-radius: 0.5rem;
+      padding:0.2rem;
+    }
+  </style>
+`;
 
     const items = podcasts
       .map(
