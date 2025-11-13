@@ -14,28 +14,28 @@ class PodcastGrid extends HTMLElement {
 
   render() {
     const style = `
-      <style>
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 1rem;
-        }
-        .card {
-          padding: 1rem;
-          border-radius: 0.5rem;
-          background: #f5f5f5;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .title {
-          font-weight: bold;
-          color: #333;
-        }
-        .updated {
-          font-size: 0.9rem;
-          color: #666;
-        }
-      </style>
-    `;
+          <style>
+            .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1rem;
+}
+            .card {
+              padding: 1rem;
+              border-radius: 0.5rem;
+              background: #f5f5f5;
+              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .title {
+              font-weight: bold;
+              color: #333;
+            }
+            .updated {
+              font-size: 0.9rem;
+              color: #666;
+            }
+          </style>
+        `;
 
     const items = podcasts
       .map(
