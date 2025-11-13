@@ -20,12 +20,21 @@ class PodcastGrid extends HTMLElement {
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   gap: 1rem;
 }
+  
             .card {
               padding: 1rem;
               border-radius: 0.5rem;
-              background: #f5f5f5;
+              background: #dab2f5ff;
               box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+              margin:0.5rem;
             }
+              .card img.cover {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
             .title {
               font-weight: bold;
               color: #333;
@@ -41,6 +50,7 @@ class PodcastGrid extends HTMLElement {
       .map(
         (p) => `
         <div class="card">
+        <img src="${p.image}" alt="${p.title}" class="cover" />
           <div class="title">🎧 ${p.title}</div>
           <div class="updated">Updated: ${p.updated}</div>
         </div>
